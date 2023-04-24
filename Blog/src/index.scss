@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0;
+}
+body {
+  color: #333;
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: calc(100% - 60px);
+    margin: 0 30px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: calc(100% - 30px);
+    margin: 0 15px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+$primary-color: #333;
+
+$secondary-color: rgb(53, 119, 97);
+::selection {
+  color: white;
+  background-color: $secondary-color;
+}
+
+.button {
+  background-color: $secondary-color;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+  font-size: 19px;
+  width: 100%;
+  text-transform: uppercase;
+}

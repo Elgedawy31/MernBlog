@@ -1,0 +1,7 @@
+.login.container{
+    min-height: calc(100vh - 140px);
+
+    @media (max-width:992px) {
+        width: 100%;
+    }
+}

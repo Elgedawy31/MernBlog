@@ -1,0 +1,16 @@
+@use '../../index.scss' as *;
+.login.container{
+    margin-top: 50px;
+    width: 50%;
+    input{
+        border: 1px solid #ddd;
+        padding: 6px 8px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+    }
+
+    a{
+        color: $secondary-color;
+    }
+
+}

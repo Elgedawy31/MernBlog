@@ -1,0 +1,77 @@
+@use "../../index.scss" as *;
+.navbar {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+
+    .logo {
+      font-weight: bold;
+      font-size: 22px;
+      color: $primary-color;
+    }
+
+    .regist {
+      display: flex;
+      gap: 0 20px;
+      font-size: 19px;
+      font-weight: 600;
+      a {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 3px;
+          bottom: -5px;
+          left: 0;
+          background-color: $secondary-color;
+        }
+      }
+
+      a:hover::after {
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+
+    .profile {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+
+      img {
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    a:hover {
+      transition: all 0.3s linear;
+      color: rgb(53, 119, 97);
+    }
+  }
+
+
+  @media (max-width:768px) {
+    .profile {
+      gap: 10px !important;
+      .text-md{
+        margin-right: 10px;
+      }
+
+      a{
+        font-size: 15px !important;
+      }
+      h2{
+        display: none;
+      }
+    }
+
+  }
+}
